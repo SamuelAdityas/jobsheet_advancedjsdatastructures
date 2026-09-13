@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Bagian 17 - DOM</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #product-list {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product Explorer</h1>
+    <div id="product-list"></div>
+
+    <script src="bagian17.js"></script>
+
+</body>
+</html>
