@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Product Explorer</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        input,
+        select {
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        #product-list {
+            display: grid;
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(220px, 1fr)
+                );
+
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>Product Explorer</h1>
+
+
+    <div class="controls">
+
+        <input
+            id="search-input"
+            type="text"
+            placeholder="Cari produk..."
+        >
+
+
+        <select id="category-select">
+
+            <option value="all">
+                Semua Kategori
+            </option>
+
+            <option value="laptops">
+                Laptops
+            </option>
+
+            <option value="smartphones">
+                Smartphones
+            </option>
+
+            <option value="beauty">
+                Beauty
+            </option>
+
+            <option value="groceries">
+                Groceries
+            </option>
+
+        </select>
+
+
+        <select id="sort-select">
+
+            <option value="default">
+                Default
+            </option>
+
+            <option value="price-asc">
+                Harga Termurah
+            </option>
+
+            <option value="price-desc">
+                Harga Termahal
+            </option>
+
+            <option value="rating">
+                Rating Tertinggi
+            </option>
+
+            <option value="title">
+                Nama
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div id="product-list"></div>
+
+
+    <script
+        type="module"
+        src="js/main.js">
+    </script>
+
+</body>
+
+</html>
