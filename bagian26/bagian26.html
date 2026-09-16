@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Product Explorer</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Product Explorer</h1>
+            <p>
+                Product Explorer & Analytics Dashboard
+            </p>
+        </header>
+
+        <div id="status" class="status">
+            Loading data...
+        </div>
+
+        <section class="controls">
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Cari nama produk..."
+            >
+
+            <select id="category-select">
+                <option value="all">
+                    Semua Kategori
+                </option>
+            </select>
+
+            <select id="sort-select">
+
+                <option value="default">
+                    Sorting Default
+                </option>
+
+                <option value="price-asc">
+                    Harga: Terendah
+                </option>
+
+                <option value="price-desc">
+                    Harga: Tertinggi
+                </option>
+
+                <option value="rating">
+                    Rating Tertinggi
+                </option>
+
+                <option value="title">
+                    Nama Produk A-Z
+                </option>
+
+            </select>
+
+        </section>
+
+        <section class="statistics">
+
+            <div class="stat-card">
+                <h3>Total Products</h3>
+                <p id="total-products">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Average Price</h3>
+                <p id="average-price">$0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Stock</h3>
+                <p id="total-stock">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Average Rating</h3>
+                <p id="average-rating">0</p>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>Product List</h2>
+
+            <div
+                id="product-list"
+                class="product-list"
+            ></div>
+
+        </section>
+
+    </div>
+
+    <script
+        type="module"
+        src="js/main.js"
+    ></script>
+
+</body>
+
+</html>
